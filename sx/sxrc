@@ -1,0 +1,13 @@
+#/usr/bin/sh
+
+# My distribution doesn't save brightness by default
+xbacklight -set 10 &
+
+# sx doesn't load Xresources by default, so I have to do it manually
+xrdb ~/.Xresources &
+
+# My pipewire startup script
+bash ~/.config/qtile/pipewire.sh &
+
+# Launches Qtile
+dbus-launch awesome
